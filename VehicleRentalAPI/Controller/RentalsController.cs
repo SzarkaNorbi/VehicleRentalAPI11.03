@@ -21,7 +21,7 @@ namespace VehicleRentalAPI.Controllers
         [HttpGet("all")]
         public async Task<IActionResult> GetRentals()
         {
-            var rentals = await context.Customers.ToListAsync();
+            var rentals = await context.Rentals.ToListAsync();
             return Ok(rentals);
         }
 
